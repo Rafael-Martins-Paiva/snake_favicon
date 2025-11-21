@@ -1,0 +1,47 @@
+@layer components {
+  #mobileView {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    background: black;
+    aspect-ratio: 1 / 1;
+    margin-top: var(--space-md);
+  }
+
+  #favCanvas {
+    display: none;
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  #restartBtn {
+    display: none;
+    margin-top: var(--space-sm);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--btn-bg);
+    color: var(--fg);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #restartBtn:hover,
+  #restartBtn:focus-visible {
+    background: var(--btn-hover);
+    transform: translateY(-0.15rem);
+  }
+
+  #restartBtn:active {
+    background: var(--btn-active);
+    transform: translateY(0);
+  }
+
+  @media (max-width: 45rem) {
+    #mobileView,
+    #restartBtn {
+      display: block;
+    }
+  }
+}
